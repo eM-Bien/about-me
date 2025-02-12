@@ -1,0 +1,17 @@
+.discoverContainer {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  width: 100vw;
+  height: 100vh;
+  animation: showSection 8s forwards;
+}
+
+@keyframes showSection {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}

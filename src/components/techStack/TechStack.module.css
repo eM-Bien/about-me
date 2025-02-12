@@ -1,0 +1,7 @@
+.infoTechStack {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 3vh;
+  margin: 2vh 0;
+}

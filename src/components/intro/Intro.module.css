@@ -1,0 +1,116 @@
+.introSection {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  width: 100vw;
+  height: 100vh;
+  background-color: var(--white);
+}
+
+.introSectionBg {
+  width: 1px;
+  height: 0;
+  background-color: var(--black);
+  animation: expandHeight 1.5s 1.5s forwards, expandWidth 1.5s 3s forwards;
+}
+
+@keyframes expandHeight {
+  0% {
+    height: 0;
+  }
+  100% {
+    height: 100%;
+  }
+}
+
+@keyframes expandWidth {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 100%;
+  }
+}
+
+.introSectionLogo {
+  position: absolute;
+  top: 45%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 1vh;
+  width: 6vh;
+  height: 6vh;
+  border-radius: 50%;
+  background-color: var(--white);
+  mix-blend-mode: difference;
+  animation: showLogo 1.5s forwards, hideLogo 1.6s 5s ease-out forwards;
+}
+
+@keyframes showLogo {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes hideLogo {
+  0% {
+    transform: translate(-50%, -50%);
+  }
+  20% {
+    transform: translate(-50%, -5vh);
+  }
+  100% {
+    transform: translate(-50%, 10vh);
+  }
+}
+
+.introSectionHide {
+  position: absolute;
+  top: 58%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 40vw;
+  height: 16vh;
+  animation: addBackground 0.5s 4s forwards;
+}
+
+@keyframes addBackground {
+  0% {
+    background-color: none;
+  }
+  100% {
+    background-color: var(--black);
+  }
+}
+
+.introSectionHorizontalLine {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 0;
+  max-width: 40vw;
+  height: 1px;
+  background-color: var(--grey-1);
+  animation: expandWidthHorizontal 1s 3.5s forwards;
+}
+
+.introSectionHorizontalLine--bold {
+  background-color: var(--white);
+  animation: expandWidthHorizontal 2s 4s forwards;
+}
+
+@keyframes expandWidthHorizontal {
+  0% {
+    width: 0;
+  }
+  50% {
+    width: 100%;
+  }
+  100% {
+    width: 0;
+  }
+}
