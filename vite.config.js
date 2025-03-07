@@ -5,6 +5,6 @@ export default defineConfig({
   base: "/about-me/",
   plugins: [react()],
   build: {
-    outDir: "build",
+    outDir: "dist",
   },
 });
